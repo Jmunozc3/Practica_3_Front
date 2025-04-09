@@ -35,7 +35,7 @@ export const handler: Handlers<Book[]> = {
       const res = await Axios.get(
         `https://openlibrary.org/search.json?q=${encodeURIComponent(title)}`,
       );
-      const book = res.data.docs[0]; // Tomamos el primero relevante
+      const book = res.data.docs[0];
 
       if (book) {
         results.push({
